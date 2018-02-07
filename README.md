@@ -1,1 +1,2 @@
-# Practica_2_Vigenere
+# Práctica de Laboratorio #2. Vigenere.
+## Alumno: Sergio Ferrera de Diego
