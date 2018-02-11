@@ -74,5 +74,14 @@ class Vigenere
 		end
         puts
     end
+    
+    def resultado
+        for i in (0..@div_mensaje.length-1)
+            for j in (0..@div_mensaje[i].length-1)
+                print "#{@div_mensaje[i][j]}"
+            end
+		end
+        puts
+    end
 	
 end
