@@ -120,7 +120,7 @@ loop do
 	puts "1: Cifrar"
 	puts "2: Descifrar"
 	puts "3: Salir"
-	print 'Introduzca una opcion: '
+	print "Introduzca una opcion: "
 	opcion = gets.chomp
 	case opcion
 		when '1'
@@ -156,5 +156,9 @@ loop do
 		when '3'
 			system "clear"
 			break
+        else
+            system "clear"
+            puts "La opción introducida es incorrecta".red
+            puts
 	end
 end
