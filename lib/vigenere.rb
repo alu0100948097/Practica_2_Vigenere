@@ -16,7 +16,7 @@ class Vigenere
 	end
 	
 	def clave=(c)
-		@clave=c.delete(' ').split('')
+		@clave=c.split('')
 	end
 	
 	def div_mensaje
@@ -129,7 +129,15 @@ loop do
             mensaje=gets.chomp.upcase
             @test.mensaje=mensaje
             print "Introduzca la palabra clave: "
-            clave=gets.chomp.upcase
+            clave=gets.chomp.upcase.delete(' ')
+            while clave.length>mensaje.length
+				system "clear"
+                puts "La longitud de la palabra clave es mayor a la del mensaje".red
+				puts
+				print "Introduza la palabra clave: "
+				clave=gets.chomp.upcase.delete(' ')
+				puts
+			end
             @test.clave=clave
             puts
             @test.div_mensaje
@@ -144,7 +152,15 @@ loop do
             mensaje=gets.chomp.upcase
             @test.mensaje=mensaje
             print "Introduzca la palabra clave: "
-            clave=gets.chomp.upcase
+            clave=gets.chomp.upcase.delete(' ')
+            while clave.length>mensaje.length
+                system "clear"
+				puts "La longitud de la palabra clave es mayor a la del mensaje".red
+				puts
+				print "Introduza la palabra clave: "
+				clave=gets.chomp.upcase.delete(' ')
+				puts
+			end
             @test.clave=clave
             puts
             @test.div_mensaje
