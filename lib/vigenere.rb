@@ -112,3 +112,43 @@ class Vigenere
     end
 	
 end
+
+@test=Vigenere.new
+
+loop do
+	puts "PRACTICA: CIFRADO DE VIGENERE"
+	puts "1: Cifrar"
+	puts "2: Descifrar"
+	puts "3: Salir"
+	print 'Introduzca una opcion: '
+	opcion = gets.chomp
+	case opcion
+		when '1'
+            system "clear"
+			print "Introduzca el mensaje: "
+            mensaje=gets.chomp
+            @test.mensaje=mensaje
+            print "Introduzca la palabra clave: "
+            clave=gets.chomp
+            @test.clave=clave
+            @test.div_mensaje
+            @test.cifrado
+            print "Mensaje cifrado: "
+            @test.resultado
+		when '2'
+			system "clear"
+			print "Introduzca el mensaje: "
+            mensaje=gets.chomp
+            @test.mensaje=mensaje
+            print "Introduzca la palabra clave: "
+            clave=gets.chomp
+            @test.clave=clave
+            @test.div_mensaje
+            @test.descifrado
+            print "Mensaje descifrado: "
+            @test.resultado
+		when '3'
+			system "clear"
+			break
+	end
+end
