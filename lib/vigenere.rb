@@ -126,10 +126,10 @@ loop do
 		when '1'
             system "clear"
 			print "Introduzca el mensaje: "
-            mensaje=gets.chomp
+            mensaje=gets.chomp.upcase
             @test.mensaje=mensaje
             print "Introduzca la palabra clave: "
-            clave=gets.chomp
+            clave=gets.chomp.upcase
             @test.clave=clave
             puts
             @test.div_mensaje
@@ -141,10 +141,10 @@ loop do
 		when '2'
 			system "clear"
 			print "Introduzca el mensaje: "
-            mensaje=gets.chomp
+            mensaje=gets.chomp.upcase
             @test.mensaje=mensaje
             print "Introduzca la palabra clave: "
-            clave=gets.chomp
+            clave=gets.chomp.upcase
             @test.clave=clave
             puts
             @test.div_mensaje
