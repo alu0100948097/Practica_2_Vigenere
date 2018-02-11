@@ -12,7 +12,7 @@ class Vigenere
 	end
 	
 	def mensaje=(m)
-		@mensaje=m.delete(' ')
+		@mensaje=m
 	end
 	
 	def clave=(c)
@@ -126,7 +126,14 @@ loop do
 		when '1'
             system "clear"
 			print "Introduzca el mensaje: "
-            mensaje=gets.chomp.upcase
+            mensaje=gets.chomp.upcase.delete(' ')
+            while mensaje.empty?
+				system "clear"
+                puts "No se ha introducido mensaje".red
+				puts
+				print "Introduza el mensaje: "
+				mensaje=gets.chomp.upcase.delete(' ')
+			end
             @test.mensaje=mensaje
             print "Introduzca la palabra clave: "
             clave=gets.chomp.upcase.delete(' ')
@@ -157,7 +164,14 @@ loop do
 		when '2'
 			system "clear"
 			print "Introduzca el mensaje: "
-            mensaje=gets.chomp.upcase
+            mensaje=gets.chomp.upcase.delete(' ')
+            while mensaje.empty?
+				system "clear"
+                puts "No se ha introducido mensaje".red
+				puts
+				print "Introduza el mensaje: "
+				mensaje=gets.chomp.upcase.delete(' ')
+			end
             @test.mensaje=mensaje
             print "Introduzca la palabra clave: "
             clave=gets.chomp.upcase.delete(' ')
