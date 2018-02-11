@@ -131,10 +131,13 @@ loop do
             print "Introduzca la palabra clave: "
             clave=gets.chomp
             @test.clave=clave
+            puts
             @test.div_mensaje
             @test.cifrado
+            puts
             print "Mensaje cifrado: "
             @test.resultado
+            puts
 		when '2'
 			system "clear"
 			print "Introduzca el mensaje: "
@@ -143,10 +146,13 @@ loop do
             print "Introduzca la palabra clave: "
             clave=gets.chomp
             @test.clave=clave
+            puts
             @test.div_mensaje
             @test.descifrado
+            puts
             print "Mensaje descifrado: "
             @test.resultado
+            puts
 		when '3'
 			system "clear"
 			break
