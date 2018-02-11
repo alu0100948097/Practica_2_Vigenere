@@ -20,7 +20,6 @@ class Vigenere
 	end
 	
 	def div_mensaje
-        
 		@div_mensaje=@mensaje.scan(/.{1,#{@clave.length}}/)
         temp=[]
         
@@ -46,8 +45,34 @@ class Vigenere
             print " "
 		end
         
-        puts
-        
+        puts 
 	end
+    
+    def cifrado
+        for i in (0..@div_mensaje.length-1)
+            for j in (0..@div_mensaje[i].length-1)
+                @div_mensaje[i][j]=@alfabeto.index("#{@div_mensaje[i][j]}")
+            end
+		end
+        
+        for i in (0..@clave.length-1) 
+            @clave[i]=@alfabeto.index("#{@clave[i]}")
+        end
+        
+        for i in (0..@div_mensaje.length-1)
+            for j in (0..@div_mensaje[i].length-1)
+                index=(@div_mensaje[i][j]+@clave[j])%@alfabeto.length
+                @div_mensaje[i][j]=@alfabeto[index]
+            end
+		end
+        
+        for i in (0..@div_mensaje.length-1)
+            for j in (0..@div_mensaje[i].length-1)
+                print "#{@div_mensaje[i][j]}".green
+            end
+            print " "
+		end
+        puts
+    end
 	
 end
