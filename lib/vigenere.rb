@@ -137,14 +137,6 @@ loop do
             @test.mensaje=mensaje
             print "Introduzca la palabra clave: "
             clave=gets.chomp.upcase.delete(' ')
-            while clave.length>mensaje.length
-				system "clear"
-                puts "La longitud de la palabra clave es mayor a la del mensaje".red
-				puts
-				print "Introduza la palabra clave: "
-				clave=gets.chomp.upcase.delete(' ')
-				puts
-			end
             while clave.empty?
 				system "clear"
                 puts "No se ha introducido palabra clave".red
@@ -175,14 +167,6 @@ loop do
             @test.mensaje=mensaje
             print "Introduzca la palabra clave: "
             clave=gets.chomp.upcase.delete(' ')
-            while clave.length>mensaje.length
-                system "clear"
-				puts "La longitud de la palabra clave es mayor a la del mensaje".red
-				puts
-				print "Introduza la palabra clave: "
-				clave=gets.chomp.upcase.delete(' ')
-				puts
-			end
             while clave.empty?
 				system "clear"
                 puts "No se ha introducido palabra clave".red
