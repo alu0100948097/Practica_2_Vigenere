@@ -3,16 +3,13 @@ require 'colorize'
 class Vigenere
 	
 	attr_reader :alfabeto, :mensaje, :clave, :div_mensaje
-	
+    attr_writer :mensaje
+    
 	def initialize
 		@alfabeto=('A'..'Z').to_a
 		@mensaje=""
 		@clave=[]
 		@div_mensaje=[]
-	end
-	
-	def mensaje=(m)
-		@mensaje=m
 	end
 	
 	def clave=(c)
