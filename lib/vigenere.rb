@@ -60,11 +60,6 @@ class Vigenere
             for j in (0..@div_mensaje[i].length-1)
                 index=(@div_mensaje[i][j]+@clave[j])%@alfabeto.length
                 @div_mensaje[i][j]=@alfabeto[index]
-            end
-		end
-        
-        for i in (0..@div_mensaje.length-1)
-            for j in (0..@div_mensaje[i].length-1)
                 print "#{@div_mensaje[i][j]}".green
             end
             print " "
@@ -87,11 +82,6 @@ class Vigenere
             for j in (0..@div_mensaje[i].length-1)
                 index=(@div_mensaje[i][j]-@clave[j])%@alfabeto.length
                 @div_mensaje[i][j]=@alfabeto[index]
-            end
-		end
-        
-        for i in (0..@div_mensaje.length-1)
-            for j in (0..@div_mensaje[i].length-1)
                 print "#{@div_mensaje[i][j]}".green
             end
             print " "
